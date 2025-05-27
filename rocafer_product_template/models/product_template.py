@@ -126,8 +126,6 @@ class Product(models.Model):
         store=True
     )
 
-
-
     advance_label_separation = fields.Float(
         string='Advance label separation',
         compute='_compute_advance_label_separation',
@@ -222,7 +220,7 @@ class Product(models.Model):
                 record.linear_meters = (record.amount / 1000 * record.printing_cylinder_size) / record.assembly_figure_x
             else:
                 record.linear_meters = (record.amount / 1000 * record.printing_cylinder_size) / record.assembly_figure_x * (1 + record.tolerance / 100)
-
+            record.linear_meters = ceil(record.linear_meters / 1000) # Convertir a metros
 
     # color_number = fields.Integer(
     #     string='Color numbers'
