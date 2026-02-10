@@ -1,7 +1,7 @@
 {
     "name": "Rocafer Custom",
     "summary": "Customization for work-order",
-    "version": "17.0.1.0.0",
+    "version": "19.0.1.0.0",
     "category": "Products",
     "author": "Manuel Calero, Salvador Gonzalez, Abraham Carrasco, Xtendoo",
     "license": "LGPL-3",

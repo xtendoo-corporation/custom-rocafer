@@ -1,7 +1,7 @@
 {
     "name": "rocafer_sale_order_line",
     "summary": """Sales Order Line Custom""",
-    "version": "17.0.1.0.0",
+    "version": "19.0.1.0.0",
     "description": """Sales Order Line Custom""",
     "company": "Xtendoo",
     "website": "http://www.xtendoo.es",

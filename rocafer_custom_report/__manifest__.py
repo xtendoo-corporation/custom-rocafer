@@ -1,7 +1,7 @@
 {
     "name": "rocafer_custom_report",
     "summary": """Formatos de documentos Rocafer""",
-    "version": "17.0.1.0.0",
+    "version": "19.0.1.0.0",
     "description": """Formatos de documentos Rocafer""",
     "company": "Xtendoo",
     "website": "http://www.xtendoo.es",

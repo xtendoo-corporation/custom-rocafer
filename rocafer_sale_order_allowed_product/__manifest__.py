@@ -3,7 +3,7 @@
     "name": "Product allowed for sale and billing",
     "summary": "This module allows you to select only products that can be "
     "sold to customer",
-    "version": "17.0.0.1.0",
+    "version": "19.0.0.1.0",
     "category": "Sale",
     "author": "Salvador Aramis González Jiménez, Xtendoo",
     "license": "LGPL-3",

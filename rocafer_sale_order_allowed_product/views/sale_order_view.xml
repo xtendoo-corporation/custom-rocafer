@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <record model="ir.ui.view" id="sale_order_rocafer_allowed_product">
         <field name="model">sale.order</field>
-        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="inherit_id" ref="sale.view_order_form" />
         <field name="arch" type="xml">
             <xpath
                 expr="//field[@name='order_line']/tree/field[@name='product_id']"
                 position="attributes"
             >
-                <attribute name="context" operation="update">
+                <attribute name="context" operation="add">
                     {
-                        "restricted_partner_id": parent.partner_id,
+                    "restricted_partner_id": parent.partner_id,
                     }
                 </attribute>
             </xpath>
@@ -18,9 +18,9 @@
                 expr="//field[@name='order_line']/tree/field[@name='product_template_id']"
                 position="attributes"
             >
-                <attribute name="context" operation="update">
+                <attribute name="context" operation="add">
                     {
-                        "restricted_partner_id": parent.partner_id,
+                    "restricted_partner_id": parent.partner_id,
                     }
                 </attribute>
             </xpath>
@@ -28,9 +28,9 @@
                 expr="//field[@name='order_line']/form//field[@name='product_id']"
                 position="attributes"
             >
-                <attribute name="context" operation="update">
+                <attribute name="context" operation="add">
                     {
-                        "restricted_partner_id": parent.partner_id,
+                    "restricted_partner_id": parent.partner_id,
                     }
                 </attribute>
             </xpath>
@@ -38,13 +38,12 @@
                 expr="//field[@name='order_line']/tree//field[@name='product_template_id']"
                 position="attributes"
             >
-                <attribute name="context" operation="update">
+                <attribute name="context" operation="add">
                     {
-                        "restricted_partner_id": parent.partner_id,
+                    "restricted_partner_id": parent.partner_id,
                     }
                 </attribute>
             </xpath>
         </field>
     </record>
 </odoo>
-

@@ -1,7 +1,7 @@
 {
     "name": "Batch Picking by Mail",
     "summary": "Send batch picking by email",
-    "version": "17.0.1.0.0",
+    "version": "19.0.1.0.0",
     "author":
         "Salvador Gonzalez (Xtendoo)",
     "category": "Warehouse Management",
