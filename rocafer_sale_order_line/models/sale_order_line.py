@@ -13,20 +13,20 @@ class SaleOrderLine(models.Model):
         readonly=False,
     )
 
-    @api.depends("product_uom_qty", "product_uom")
+    @api.depends("product_uom_qty", "product_uom_id")
     def _compute_total_units(self):
         for line in self:
-            if line.product_uom:
+            if line.product_uom_id:
                 line.total_units = int(
-                    round(line.product_uom_qty * line.product_uom.factor_inv)
+                    round(line.product_uom_qty * line.product_uom_id.factor_inv)
                 )
             else:
                 line.total_units = 0
 
     def _set_total_units(self):
         for line in self:
-            if line.product_uom and line.product_uom.factor_inv:
-                line.product_uom_qty = line.total_units / line.product_uom.factor_inv
+            if line.product_uom_id and line.product_uom_id.factor_inv:
+                line.product_uom_qty = line.total_units / line.product_uom_id.factor_inv
 
     # @api.depends('display_type', 'product_id', 'product_packaging_qty', 'total_units')
     # def _compute_product_uom_qty(self):
