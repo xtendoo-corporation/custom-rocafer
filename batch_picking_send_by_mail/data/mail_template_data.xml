@@ -3,10 +3,12 @@
     <data noupdate="1">
         <record id="mail_template_data_delivery_batch_confirmation" model="mail.template">
             <field name="name">Envío albarán: Enviar por correo electrónico</field>
-            <field name="model_id" ref="model_stock_picking_batch"/>
-            <field name="subject">{{ object.company_id.name }} Delivery Order (Ref {{ object.name or 'n/a' }})</field>
-            <field name="partner_to">{{ object.move_lines.picking_partner_id.email and object.move_lines.picking_partner_id.id or
-                object.move_lines.picking_partner_id.parent_id.id }}
+            <field name="model_id" ref="model_stock_picking_batch" />
+            <field name="subject">{{ object.company_id.name }} Delivery Order (Ref {{ object.name or
+                'n/a' }})</field>
+            <field name="partner_to">{{ object.move_ids.picking_partner_id.email and
+                object.move_ids.picking_partner_id.id or
+                object.move_ids.picking_partner_id.parent_id.id }}
             </field>
             <field name="description">Envío lote de albaranes por correo electrónico
             </field>
@@ -16,8 +18,9 @@
                 <p>Encontrará más detalles en la orden de entrega adjunta.</p>
                 <p>Gracias,</p>
             </field>
-            <field name="report_template_ids" eval="[(4, ref('stock_picking_batch.action_report_picking_batch'))]"/>
-            <field name="auto_delete" eval="True"/>
+            <field name="report_template_ids"
+                eval="[(4, ref('stock_picking_batch.action_report_picking_batch'))]" />
+            <field name="auto_delete" eval="True" />
         </record>
     </data>
 </odoo>

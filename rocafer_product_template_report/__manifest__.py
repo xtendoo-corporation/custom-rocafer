@@ -1,16 +1,16 @@
 {
     "name": "Rocafer Custom Order Report",
     "summary": "Customization for work-order report",
-    "version": "17.0.1.0.0",
+    "version": "18.0.1.0.0",
     "category": "Products",
     "author": "Manuel Calero, Salvador Gonzalez, Abraham Carrasco, Xtendoo",
     "license": "LGPL-3",
     "application": True,
     "depends": [
-        'web',
-        'product',
-        'sale',
-        'rocafer_product_template',
+        "web",
+        "product",
+        "sale",
+        "rocafer_product_template",
     ],
     "data": [
         "views/sale_order_rocafer.xml",
